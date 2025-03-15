@@ -3,25 +3,23 @@
 from flask import Blueprint, render_template
 from flask_login import login_required, current_user
 
-googleKey = "AIzaSyCco0U7c9RmqgINw0xxqBC_TgK80L2X0UE"
-
 main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
     return render_template('index.html')
 
-@main.route('/traffic')
+@main.route('/charactersheet')
 @login_required
-def traffic():
-    return render_template('traffic.html',googleKey=googleKey)
+def charactersheet():
+    return render_template('charactersheet.html')
     
-@main.route('/parking')
+@main.route('/inventorymanagement')
 @login_required
-def parking():
-    return render_template('parking.html')
+def inventorymanagement():
+    return render_template('inventorymanagement.html')
 
-@main.route('/scooter')
+@main.route('/playerstats')
 @login_required
-def scooter():
-    return render_template('scooter.html')    
+def playerstats():
+    return render_template('playerstats.html')    
