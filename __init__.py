@@ -21,7 +21,7 @@ def create_app():
     app.logger.error("Error log info")
     app.logger.critical("Critical log info")
     
-    app.config['SECRET_KEY'] = '9OLWxND4o83j4K4iuopO'
+    app.config['SECRET_KEY'] = ''
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
 
